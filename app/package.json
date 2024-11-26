@@ -1,0 +1,13 @@
+{
+  "name": "approuter",
+  "dependencies": {
+    "@sap/approuter": "^17.1.0",
+    "jwt-decode": "^4.0.0"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "scripts": {
+    "start": "node approuter.js"
+  }
+}

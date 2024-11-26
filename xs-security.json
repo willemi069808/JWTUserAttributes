@@ -1,0 +1,119 @@
+{
+    "xsappname": "userAttributesSample",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of Simple Auth App",
+    "scopes": [
+        {
+            "name": "uaa.user",
+            "description": "UAA"
+        }
+    ],
+    "attributes": [
+        {
+            "name": "sub",
+            "description": "sub",
+            "valueType": "string"
+        },
+        {
+            "name": "iss",
+            "description": "iss",
+            "valueType": "string"
+        },
+        {
+            "name": "exp",
+            "description": "exp",
+            "valueType": "string"
+        },
+        {
+            "name": "iat",
+            "description": "iat",
+            "valueType": "string"
+        },
+        {
+            "name": "gender",
+            "description": "gender",
+            "valueType": "string"
+        },
+        {
+            "name": "mobile",
+            "description": "mobile",
+            "valueType": "string"
+        },
+        {
+            "name": "lastnameEN",
+            "description": "lastnameEN",
+            "valueType": "string"
+        },
+        {
+            "name": "fullnameEN",
+            "description": "fullnameEN",
+            "valueType": "string"
+        },
+        {
+            "name": "uuid",
+            "description": "uuid",
+            "valueType": "string"
+        },
+        {
+            "name": "nationalityEN",
+            "description": "nationalityEN",
+            "valueType": "string"
+        },
+        {
+            "name": "firstnameEN",
+            "description": "firstnameEN",
+            "valueType": "string"
+        },
+        {
+            "name": "userType",
+            "description": "userType",
+            "valueType": "string"
+        },
+        {
+            "name": "nationalityAR",
+            "description": "nationalityAR",
+            "valueType": "string"
+        },
+        {
+            "name": "email",
+            "description": "email",
+            "valueType": "string"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Token_Exchange",
+            "description": "UAA",
+            "scope-references": [
+                "uaa.user"
+            ]
+        },
+        {
+            "name": "UserAttributes",
+            "description": "Get User Attributes",
+            "attribute-references": [
+                "sub",
+                "iss",
+                "exp",
+                "iat",
+                "gender",
+                "mobile",
+                "email",
+                "lastnameEN",
+                "fullnameEN",
+                "uuid",
+                "nationalityEN",
+                "firstnameEN",
+                "userType",
+                "nationalityAR"
+            ]
+        }
+    ],
+    "oauth2-configuration": {
+        "redirect-uris": [
+            "https://*.hana.ondemand.com/**",
+            "http://localhost:5000/login/callback"
+        ]
+    },
+    "xsenableasyncservice": "true"
+}

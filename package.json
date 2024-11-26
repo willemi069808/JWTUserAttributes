@@ -1,0 +1,44 @@
+{
+  "name": "user_attributes",
+  "version": "1.0.0",
+  "description": "A simple authentication app with user info.",
+  "repository": "https://github.com/willemi069808/JWTUserAttributes",
+  "license": "CC",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.23.0",
+    "@sap/cds": "^8",
+    "@sap/xssec": "^4",
+    "express": "^4",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.124.5",
+    "sqlite3": "^5.1.7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "xsuaa"
+      },
+      "approuter": {
+        "kind": "cloudfoundry"
+      },
+      "rest_api": {
+        "kind": "rest",
+        "credentials": {
+          "forwardAuthToken": true
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app"
+  ]
+}
